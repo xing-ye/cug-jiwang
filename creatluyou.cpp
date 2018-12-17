@@ -6,11 +6,11 @@ void  Graphmtx::chushihua() //初始化
 	int n = NumberOfVertices();
 	for (int v1 = 0; v1 < n; v1++) {
 		int w = getFirstNeighbor(v1);
-		ptr = VerticesList[v1].head = new Node(getValue(w).name, getWeight(v1, w), "无");
+		ptr = VerticesList[v1].head = new Node(getValue(w).name, getWeight(v1, w), getValue(w).name);
 		while (1) {
 			w = getNextNeighbor(v1, w);
 			if (w == -1)break;
-			ptr->next = new Node(getValue(w).name, getWeight(v1, w), "无");
+			ptr->next = new Node(getValue(w).name, getWeight(v1, w), getValue(w).name);
 			ptr = ptr->next;
 		}
 	}

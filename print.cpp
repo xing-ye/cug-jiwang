@@ -16,7 +16,7 @@ void Graphmtx::PrintItem(string s)	//输出路由表
 		Node *ptr;
 		ptr = VerticesList[v1].head;
 		while (ptr) {
-			cout << "目的端口:" << ptr->net_num << "  ";
+			cout << "     " << ptr->net_num << "  ";
 			cout << "下一跳" << ptr->next_hop << "  ";
 			cout << "最小权值" << ptr->distance << endl;
 			ptr = ptr->next;
